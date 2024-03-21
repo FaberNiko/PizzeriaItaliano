@@ -13,11 +13,23 @@ const handleNav = () => {
 			navBtn.classList.remove("is-active");
 		});
 	});
+	handleNavItemsAnimation();
 };
 
-navBtn.addEventListener("click", handleNav);
+const handleNavItemsAnimation = () => {
+	let delayTime = 0;
+
+	allNavItems.forEach(item => {
+		item.classList.toggle("nav-items-animation");
+		item.style.animationDelay = "." + delayTime + "s";
+		delayTime++;
+	});
+};
+
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;
 };
+
+navBtn.addEventListener("click", handleNav);

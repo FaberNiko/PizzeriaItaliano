@@ -17,7 +17,7 @@
 
   <header class="header">
 
-    <h2 class="header__logo">Pizzeria Italiano</h2>
+    <a href="#home" class="header__logo">Pizzeria Italiano</a>
     
     <button class="hamburger hamburger--vortex" type="button">
         <span class="hamburger-box">
@@ -33,15 +33,25 @@
     </nav>
     
     <nav class="nav nav-desktop">
-      <div class="nav__items">
-        <a href="#home" class="nav__item">Strona główna</a>
-        <a href="#aboutus" class="nav__item">O nas</a>
-        <a href="#Menu" class="nav__item">Menu</a>
-        <a href="#contact" class="nav__item">Kontakt</a>
+      <div class="nav-desktop__items">
+        <a href="#home" class="nav-desktop__item">Strona główna</a>
+        <a href="#aboutus" class="nav-desktop__item">O nas</a>
+        <a href="#Menu" class="nav-desktop__item">Menu</a>
+        <a href="#contact" class="nav-desktop__item">Kontakt</a>
     </div>
     </nav>
   </header>
 
+  <main>
+    <section class="home" id="#home">
+      <div class="home__text">
+        <h1 class="home__logo">Pizzeria Italiano</h1>
+        <p>Prawdziwa włoska pizza</p>
+      </div>
+      <div class="home__shadow"></div>
+      <a href="#aboutus" class="home__arrow"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+    </section>
+  </main>
 
   <section class="footer">
     <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Pizzeria Italiano</p>

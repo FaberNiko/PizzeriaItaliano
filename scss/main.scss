@@ -1,4 +1,7 @@
+
+
 @import "./colors";
+@import "./animations";
 *,
 *::before,
 *::after {
@@ -15,22 +18,22 @@ html {
 body {
 	font-family: "Lato", sans-serif;
 	font-size: 1.6rem;
-	background-color: #333;
+	background-color: $black-color;
 }
 
 // BURGER BUTTON
 
 .hamburger {
 	position: fixed;
-	top: 10px;
+	top: 15px;
 	right: 10px;
-	padding: 1em;
+	padding: 0.5em;
 	background: $red-color;
 	border-radius: 8px;
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
-	
+
 	&-inner,
 	&-inner::before,
 	&-inner::after {
@@ -42,30 +45,39 @@ body {
 		border: 1px solid rgba(255, 255, 255, 0.5);
 		border-radius: 8px;
 	}
-
-	.is-active {
-		background-color: $white-color;
-	}
 }
 
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: #fff;
+}
 .header {
+	position: fixed;
 	height: 100px;
+	z-index: 1000;
 
 	&__logo {
-		position: absolute;
+		position: fixed;
 		top: 25px;
-		font-family: 'Dancing Script';
+		font-family: "Dancing Script";
 		color: $white-color;
 		padding: 0 1em;
-		font-size: 2.5rem; 
+		width: 100%;
+		font-size: 2.5rem;
+		text-decoration: none;
 		z-index: 1000;
+		transition:color .3s;
+
+		&:hover {
+			color: $red-color;
+		}
 	}
 }
 
 // NAV
 
 .nav {
-
 	&-desktop {
 		display: none;
 	}
@@ -84,7 +96,7 @@ body {
 		background-color: #333;
 		transition: 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
 		z-index: 100;
-	
+
 		&--active {
 			transform: translateX(0);
 		}
@@ -114,28 +126,130 @@ body {
 				transform: scaleX(1);
 			}
 		}
-
-		
-
 	}
 }
+  
+.nav-items-animation {
+	-webkit-animation: fade-in-right 1s ease-in both;
+	animation: fade-in-right 1s ease-in both;
+}
 
+.home {
+	position: relative;
+	top: 0;
+	height: 100vh;
+	background-image: url('/img/pizza-small.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__logo {
+		padding: 0.5em;
+		font-size: 5rem;
+		font-family: "Dancing Script";
+		color: $white-color;
+	}
+	
+	p {
+		letter-spacing: 2px;
+		font-style: italic;
+		color: $white-color;
+	}
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+
+	&__arrow {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 3em;
+		text-decoration: none;
+		color: $white-color;
+	}
+	
+}
+
+.bounce-top {
+	-webkit-animation: bounce-top 2s linear 2s infinite forwards;
+	        animation: bounce-top 2s linear 2s infinite forwards;
+}
 
 //MEDIA QUERIES
 
 @media (min-width: 768px) {
+
+	.hamburger {
+		right: 20px;
+	}
 	.header {
 		&__logo {
-			font-size: 3rem;
+			top: 30px;
+			font-size: 3.3rem;
 		}
 	}
 
 	.nav {
 		&-mobile {
-
 			&__item {
 				font-size: 3rem;
-				
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.header {
+		&__logo {
+			padding: 0 2em;
+		}
+	}
+	.hamburger {
+		display: none;
+	}
+
+	.nav-mobile {
+		display: none;
+	}
+
+	.nav-desktop {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		justify-content: flex-end;
+		align-items: center;
+		
+		&__items {
+			margin-right: 4em;
+		}
+		
+		&__item {
+			padding: 2em;
+			text-decoration: none;
+			color: $white-color;
+			text-transform: uppercase;
+			font-size: 2rem;
+			transition: color .3s;
+
+			&:hover {
+				color: $red-color;
 			}
 		}
 	}
