@@ -44,18 +44,46 @@
 
   <main>
     <section class="home" id="#home">
-      <div class="home__text">
-        <h1 class="home__logo">Pizzeria Italiano</h1>
-        <p>Prawdziwa włoska pizza</p>
+      <div class="wrapper">
+        <div class="home__text">
+          <h1 class="home__logo">Pizzeria Italiano</h1>
+          <p>Prawdziwa włoska pizza</p>
+        </div>
+        <div class="home__shadow"></div>
+        <a href="#aboutus" class="home__arrow"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
       </div>
-      <div class="home__shadow"></div>
-      <a href="#aboutus" class="home__arrow"><i class="fa-solid fa-chevron-down bounce-top"></i></a>
+    </section>
+
+    <section class="aboutus section" id="aboutus">
+      <div class="wrapper">
+
+        <h2 class="section-title">o nas</h2>
+        <p class="aboutus__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit suscipit laboriosam provident impedit adipisci, odio culpa officiis quae. Lorem ipsum dolor sit amet.</p>
+
+        <div class="aboutus__cards">
+          <div class="aboutus__card aboutus__card--one">
+            <h3 class="aboutus__card-title">Kraków</h3>
+            <p class="card__adress">ul. Wadowicka 32</p>
+          </div>
+
+          <div class="aboutus__card aboutus__card--two">
+            <h3 class="aboutus__card-title">Warszawa</h3>
+            <p class="card__adress">ul. Krakowska 3</p>
+          </div>
+
+          <div class="aboutus__card aboutus__card--three">
+            <h3 class="aboutus__card-title">Poznań</h3>
+            <p class="card__adress">ul. Cicha 14</p>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
-  <section class="footer">
+  <!-- <section class="footer">
     <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Pizzeria Italiano</p>
-</section>
+</section> -->
 
   <script src="./js/script.js"></script>
 </body>

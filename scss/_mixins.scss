@@ -1,0 +1,6 @@
+@mixin heroImages($bgImg) {
+    background-image: $light-dark-gradient ,url($bgImg);
+    background-size: cover;
+    background-position: center;
+
+}
