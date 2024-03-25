@@ -305,6 +305,9 @@ body {
   padding: 1em;
   letter-spacing: 2px;
 }
+.aboutus__card-hours {
+  margin-top: 5em;
+}
 
 @media (min-width: 768px) {
   .hamburger {
