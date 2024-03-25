@@ -21,6 +21,10 @@ body {
 	color: $white-color;
 }
 
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -201,6 +205,11 @@ body {
 	animation: bounce-top 2s linear 2s infinite forwards;
 }
 
+.flip-in-hor-bottom {
+	-webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 // ABOUTUS
 
 .aboutus {
@@ -331,6 +340,7 @@ body {
 		justify-content: flex-end;
 		align-items: center;
 		z-index: 15;
+		transition: background-color 0.6s;
 
 		&__items {
 			margin-right: 4em;
@@ -365,6 +375,10 @@ body {
 
 		&__card {
 			height: 450px;
+
+			&-adress {
+				font-size: 2rem;
+			}
 		}
 	}
 }

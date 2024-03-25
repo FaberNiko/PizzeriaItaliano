@@ -2,15 +2,16 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzeria Italiano</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/hamburger.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="https://kit.fontawesome.com/7596d00a84.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzeria Italiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/hamburger.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://kit.fontawesome.com/7596d00a84.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,32 +19,32 @@
   <header class="header">
 
     <a href="#home" class="header__logo">Pizzeria Italiano</a>
-    
+
     <button class="hamburger hamburger--vortex" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>  
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <nav class="nav nav-mobile">
-        <a href="#home" class="nav-mobile__item">Strona główna</a>
-        <a href="#aboutus" class="nav-mobile__item">O nas</a>
-        <a href="#Menu" class="nav-mobile__item">Menu</a>
-        <a href="#contact" class="nav-mobile__item">Kontakt</a>
-    </div>
+      <a href="#home" class="nav-mobile__item">Strona główna</a>
+      <a href="#aboutus" class="nav-mobile__item">O nas</a>
+      <a href="#Menu" class="nav-mobile__item">Menu</a>
+      <a href="#contact" class="nav-mobile__item">Kontakt</a>
+      </div>
     </nav>
-    
+
     <nav class="nav nav-desktop">
       <div class="nav-desktop__items">
         <a href="#home" class="nav-desktop__item">Strona główna</a>
         <a href="#aboutus" class="nav-desktop__item">O nas</a>
         <a href="#Menu" class="nav-desktop__item">Menu</a>
         <a href="#contact" class="nav-desktop__item">Kontakt</a>
-    </div>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class="home" id="#home">
+    <section class="home" id="home">
       <div class="wrapper">
         <div class="home__text">
           <h1 class="home__logo">Pizzeria Italiano</h1>
@@ -54,26 +55,27 @@
       </div>
     </section>
 
-    <section class="aboutus section" id="aboutus">
+    <section class="aboutus section black-section" id="aboutus">
       <div class="wrapper">
 
         <h2 class="section-title">o nas</h2>
-        <p class="aboutus__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit suscipit laboriosam provident impedit adipisci, odio culpa officiis quae. Lorem ipsum dolor sit amet.</p>
+        <p class="aboutus__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit suscipit laboriosam
+          provident impedit adipisci, odio culpa officiis quae. Lorem ipsum dolor sit amet.</p>
 
         <div class="aboutus__cards">
-          <div class="aboutus__card aboutus__card--one">
+          <div class="aboutus__card aboutus__card--one " data-aos="zoom-in" data-aos-delay="100">
             <h3 class="aboutus__card-title">Kraków</h3>
-            <p class="card__adress">ul. Wadowicka 32</p>
+            <p class="aboutus__card-adress">ul. Wadowicka 32</p>
           </div>
 
-          <div class="aboutus__card aboutus__card--two">
+          <div class="aboutus__card aboutus__card--two" data-aos="zoom-in" data-aos-delay="200">
             <h3 class="aboutus__card-title">Warszawa</h3>
-            <p class="card__adress">ul. Krakowska 3</p>
+            <p class="aboutus__card-adress">ul. Krakowska 3</p>
           </div>
 
-          <div class="aboutus__card aboutus__card--three">
+          <div class="aboutus__card aboutus__card--three" data-aos="zoom-in" data-aos-delay="300">
             <h3 class="aboutus__card-title">Poznań</h3>
-            <p class="card__adress">ul. Cicha 14</p>
+            <p class="aboutus__card-adress">ul. Cicha 14</p>
           </div>
         </div>
 
@@ -84,8 +86,19 @@
   <!-- <section class="footer">
     <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Pizzeria Italiano</p>
 </section> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      startEvent: 'DOMContentLoaded',
+      offset: 200,
+      duration: 500,
+      once: true, 
+    });
+  </script>
+
 
   <script src="./js/script.js"></script>
+
 </body>
 
 </html>

@@ -54,6 +54,16 @@
     opacity: 1;
   }
 }
+@keyframes flip-in-hor-bottom {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -72,6 +82,10 @@ body {
   font-size: 1.6rem;
   background-color: #000;
   color: #fff;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .wrapper {
@@ -231,6 +245,10 @@ body {
   animation: bounce-top 2s linear 2s infinite forwards;
 }
 
+.flip-in-hor-bottom {
+  animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 .aboutus {
   height: 100vh;
 }
@@ -334,6 +352,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     z-index: 15;
+    transition: background-color 0.6s;
   }
   .nav-desktop__items {
     margin-right: 4em;
@@ -360,5 +379,8 @@ body {
   }
   .aboutus__card {
     height: 450px;
+  }
+  .aboutus__card-adress {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
