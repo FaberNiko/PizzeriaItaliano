@@ -44,6 +44,6 @@ function addShadow() {
 	}
 	console.log(scrollY);
 }
-
+handleCurrentYear();
 navBtn.addEventListener("click", handleNav);
 window.addEventListener("scroll", addShadow);

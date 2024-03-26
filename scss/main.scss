@@ -276,6 +276,12 @@ body {
 .menu {
 	height: 100%;
 	background-color: #333;
+	overflow: hidden;
+
+	hr {
+		width: 100%;
+		margin-top: 1em;
+	}
 
 	.size-info {
 		display: flex;
@@ -351,6 +357,70 @@ body {
 			padding: 1em;
 		}
 	}
+}
+
+//CONTACT
+
+.contact {
+
+	.section-title {
+		margin-bottom: 0.5em;
+	}
+
+	.cracow-title {
+		color: $green-color;
+	}
+
+	.poznan-title {
+		color: $red-color;
+	}
+
+	hr {
+		margin: 1em;
+	}
+
+	.logo {
+		font-family: 'Dancing Script';
+		font-size: 3rem;
+		// padding: 1em;
+		text-align: center;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5em;
+		border-radius: 8px;
+		margin: 1em;
+		border: 2px solid #fff;
+
+		h4 {
+			text-transform: uppercase;
+			padding: 0.5em;
+			font-size: 2rem;
+		}
+
+		&-list {
+			list-style: none;
+
+
+			&-item {
+				padding: 0.5em;
+
+				i {
+					padding: 0.5em;
+				}
+			}
+		}
+	}
+}
+
+//FOOTER
+
+.footer {
+	padding: 0.5em;
+	text-align: center;
 }
 
 //MEDIA QUERIES
@@ -514,5 +584,44 @@ body {
 		.trimmings-list {
 			font-size: 2rem;
 		}
+	}
+
+	.contact {
+
+		.boxes {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+
+		}
+		.section-title {
+			font-size: 4rem;
+			margin-bottom: 2em;
+		}
+
+		.logo {
+			font-size: 4rem;
+		}
+
+		&__box {
+			padding: 2em;
+
+			h4 {
+				font-size: 2.5rem;
+			}
+
+			&-list {
+				&-item {
+					font-size: 2rem;
+				}
+			}
+		}
+
+		
+	}
+
+	.footer {
+		font-size: 2rem;
+		padding-top: 3em;
 	}
 }
