@@ -151,20 +151,19 @@ body {
 
 .home {
 	position: relative;
-	top: 0;
 	height: 100vh;
 	background-image: url('../img/pizza-small.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
 	&__text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		height: 100%;
+		text-align: center;
 	}
 
 	&__logo {
