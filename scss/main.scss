@@ -152,10 +152,11 @@ body {
 .home {
 	position: relative;
 	height: 100vh;
-	background-image: url('../img/pizza-small.jpg');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	@include heroImages('../img/pizza-small.jpg');
+	// background-image: url('../img/pizza-small.jpg');
+	// background-size: cover;
+	// background-position: center;
+	// background-attachment: fixed;
 	z-index: 0;
 	display: flex;
 	justify-content: center;
@@ -507,7 +508,7 @@ body {
 	}
 
 	.home {
-		background-image: url("../img/pizza-big.jpg");
+		@include heroImages('../img/pizza-big.jpg');
 	}
 
 	.aboutus {
