@@ -153,7 +153,7 @@ body {
 	position: relative;
 	top: 0;
 	height: 100vh;
-	background-image: url("/img/pizza-small.jpg");
+	background-image: url('../img/pizza-small.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -206,8 +206,9 @@ body {
 }
 
 .flip-in-hor-bottom {
-	-webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		both;
+	animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 // ABOUTUS
@@ -221,7 +222,6 @@ body {
 
 .aboutus {
 	height: 100%;
-
 
 	&__text {
 		padding: 1em;
@@ -295,7 +295,6 @@ body {
 		}
 	}
 
-
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -304,25 +303,23 @@ body {
 		width: 100%;
 		padding: 1em;
 		margin: 1em auto;
-	
 
 		&-card {
 			position: relative;
 			background-color: #fff;
 			width: 95%;
-			margin: .5em;
+			margin: 0.5em;
 			padding: 0.5em;
 			border-radius: 8px;
-			@include heroImages('../img/pizza-menu.jpg');
-			transition: transform .3s;
+			@include heroImages("../img/pizza-menu.jpg");
+			transition: transform 0.3s;
 
 			&:hover {
 				transform: scale(1.1);
 			}
 
-
 			&:nth-child(odd) {
-				@include heroImages('../img/pizza-menu2.jpg')
+				@include heroImages("../img/pizza-menu2.jpg");
 			}
 
 			&-title {
@@ -332,11 +329,10 @@ body {
 			}
 
 			&-indegredients {
-				padding: 1em ;
+				padding: 1em;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				font-size: 1.1rem;
-
 			}
 
 			&-price {
@@ -362,7 +358,6 @@ body {
 //CONTACT
 
 .contact {
-
 	.section-title {
 		margin-bottom: 0.5em;
 	}
@@ -380,7 +375,7 @@ body {
 	}
 
 	.logo {
-		font-family: 'Dancing Script';
+		font-family: "Dancing Script";
 		font-size: 3rem;
 		// padding: 1em;
 		text-align: center;
@@ -403,7 +398,6 @@ body {
 
 		&-list {
 			list-style: none;
-
 
 			&-item {
 				padding: 0.5em;
@@ -432,7 +426,6 @@ body {
 	}
 	.header {
 		&__logo {
-			
 			font-size: 3.3rem;
 		}
 	}
@@ -468,8 +461,6 @@ body {
 			height: 350px;
 		}
 	}
-
-	
 }
 
 @media (min-width: 992px) {
@@ -517,9 +508,9 @@ body {
 	}
 
 	.home {
-		background-image: url("/img/pizza-big.jpg");
+		background-image: url("../img/pizza-big.jpg");
 	}
-	
+
 	.aboutus {
 		.section-title {
 			font-size: 4.5rem;
@@ -539,7 +530,6 @@ body {
 	}
 
 	.menu {
-
 		.section-title {
 			font-size: 4rem;
 			margin-bottom: 1em;
@@ -551,30 +541,26 @@ body {
 			}
 		}
 		&__box {
-
 			padding: 2em;
 			&-card {
 				padding: 2em;
 
 				&-title {
-					
 					font-size: 3rem;
 					text-transform: uppercase;
 				}
-	
+
 				&-indegredients {
-					padding: 1em ;
+					padding: 1em;
 					text-transform: uppercase;
 					letter-spacing: 1px;
 					font-size: 1.5rem;
-	
 				}
 
 				&-price {
 					font-size: 2rem;
 				}
 			}
-
 		}
 
 		.trimmings {
@@ -587,12 +573,10 @@ body {
 	}
 
 	.contact {
-
 		.boxes {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
-
 		}
 		.section-title {
 			font-size: 4rem;
@@ -616,8 +600,6 @@ body {
 				}
 			}
 		}
-
-		
 	}
 
 	.footer {
