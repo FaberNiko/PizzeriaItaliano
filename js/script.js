@@ -3,6 +3,7 @@ const allNavItems = document.querySelectorAll(".nav-mobile__item");
 const navBtn = document.querySelector(".hamburger");
 const footerYear = document.querySelector(".footer__year");
 const navDesktop = document.querySelector(".nav-desktop");
+const logo = document.querySelector('.header__logo')
 
 
 const handleNav = () => {
@@ -36,8 +37,10 @@ const handleCurrentYear = () => {
 function addShadow() {
 	if (window.scrollY >= 300) {
 		navDesktop.classList.add("shadow-bg");
+		logo.classList.add("shadow-bg");
 	} else {
 		navDesktop.classList.remove("shadow-bg");
+		logo.classList.remove("shadow-bg");
 	}
 	console.log(scrollY);
 }
